@@ -11,7 +11,7 @@ library(stringdist)
 ## Summarize ggplot2::movies to only animations 10 minutes or less
 ## then arrange by year and descending rating, and then select only
 ## 1 best animation per year. Only keep the title and year.
-ggplot2::movies %>% 
+ggplot2movies::movies %>% 
   filter(Animation==1, length<=10) %>% 
   arrange(year,desc(rating)) %>% 
   select(title,year,rating) %>% 
